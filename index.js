@@ -104,14 +104,16 @@ Use the addReview function below to do the following:
   🌟 EXAMPLE: addReview(reviews, 'Billy', 2, 'Lame food!') should add the following to the end of the array: {name: 'Billy', rating: 2, feedback: 'Lame food!'}
   4. Return the updated array
 */
-
-
-function addReview(array, name, rating, feedback){
-reviews.push(array, name, rating, feedback)
-return reviews
+function addReview (array, name, rating, feedback){
+  reviews.push(addReview)
 }
-addReview(reviews, 'Billy', 2, 'Lame food!')
-console.log(reviews)
+  addReview(reviews, 'Billy', 2, 'Lame food!')
+// function addReview(array, name, rating, feedback){
+// reviews.push(array, name, rating, feedback)
+// return reviews
+// }
+// addReview(reviews, 'Billy', 2, 'Lame food!')
+// console.log(reviews)
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function to return a review based on the index of the review in the array.
 
@@ -123,10 +125,11 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
-}
+function getReviewByIndex(array, number) {
 
+  return `${array[number].name} gave the restaurant a ${array[number].rating} star review, and their feedback was: ${array[number].feedback}`
+}
+console.log(getReviewByIndex(reviews, 2))
   
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
