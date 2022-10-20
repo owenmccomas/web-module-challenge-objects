@@ -146,7 +146,7 @@ Use the getLastReview function below to do the following:
 
 function getLastReview(array) {
   // const lastItem = a
-  return `${array.slice(-1).name} gave the restaurant a ${array.slice(-1).rating} star review, and their feedback was: ${array.slice(-1).feedback}`
+  return `${array[array.length -1].name} gave the restaurant a ${array[array.length -1].rating} star review, and their feedback was: ${array[array.length -1].feedback}`
 } 
 getLastReview(reviews)
 
