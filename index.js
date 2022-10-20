@@ -59,14 +59,14 @@ const burger = {
   price: 18, 
   category: "Lunch", 
   discount: function(person){
-    if (person === 'Teacher' || person === 'Student'){
+    if (person === 'teacher' || person === 'student'){
       return burger.price - (burger.price * .25)
     }  else {
       return burger.price - (burger.price * .10)
     }
   }
 }
-console.log(burger.discount('Teacher'))
+console.log(burger.discount('teacher'))
 ///////////////Reviews (MVP)///////////////////
 const reviews = [
     {name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and wonderful vegan options!"},
@@ -105,15 +105,14 @@ Use the addReview function below to do the following:
   4. Return the updated array
 */
 function addReview (array, name, rating, feedback){
-  reviews.push(addReview)
+  const newObj = {name, rating, feedback}
+  array.push(newObj);
+  return array;
 }
-  addReview(reviews, 'Billy', 2, 'Lame food!')
-// function addReview(array, name, rating, feedback){
-// reviews.push(array, name, rating, feedback)
-// return reviews
-// }
-// addReview(reviews, 'Billy', 2, 'Lame food!')
-// console.log(reviews)
+  addReview(reviews, 'Billy', 2, 'Lame food!');
+  console.log(reviews);
+
+
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function to return a review based on the index of the review in the array.
 
@@ -145,10 +144,11 @@ Use the getLastReview function below to do the following:
 */
 
 
-function getLastReview(/*Your code here*/) {
-  /*Your code here*/
+function getLastReview(array) {
+  // const lastItem = a
+  return `${array.slice(-1).name} gave the restaurant a ${array.slice(-1).rating} star review, and their feedback was: ${array.slice(-1).feedback}`
 } 
-
+getLastReview(reviews)
 
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
